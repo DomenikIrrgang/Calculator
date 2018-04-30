@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run buildjs && npm run buildsass",
+    "buildsass": "sass ./sass/styles.sass ./build/css/styles.css",
+    "buildjs": "babel ./src -d ./build && browserify ./build/js/main.js -o ./build/bundle/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browserify": "^16.2.0",
+    "sass": "^1.3.0"
+  }
+}
